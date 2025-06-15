@@ -111,16 +111,28 @@ class Program
 
                         List<SportsEquipment>? items = JsonSerializer.Deserialize<List<SportsEquipment>>(json_file);
 
-                        foreach (var element in items)
+                        if (items != null)
                         {
-                            bidirectionalList.InsertMiddle(element);
+                            foreach (var element in items)
+                            {
+                                bidirectionalList.InsertMiddle(element);
+                            }
+
+                            Console.WriteLine("Deserialization Done!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Deserialization returned null!");
                         }
 
-                        Console.WriteLine("Deserialization Done!");
+                    }
+                    catch (FileNotFoundException ex)
+                    {
+                        Console.WriteLine("File not found!");
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("File not found!");
+                        Console.WriteLine(ex.Message);
                     }
                    
                     break;
