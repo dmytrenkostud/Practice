@@ -17,6 +17,7 @@ class Program
         Console.WriteLine("4. Search");
         Console.WriteLine("5. Serialize");
         Console.WriteLine("6. Deserialize");
+        Console.WriteLine("7. Sort");
         Console.WriteLine("0. Exit");
 
         bool exit = false;
@@ -136,6 +137,18 @@ class Program
                     }
                    
                     break;
+                case "7":
+                    if (bidirectionalList.count != 0)
+                    {
+                        bidirectionalList.BubbleSortByWeight();
+                        bidirectionalList.PrintList();
+                    }
+                    else
+                    {
+                        Console.WriteLine("No items found.");
+                    }
+                    break;
+                    
                 case "0":
                     exit = true;
                     break;
