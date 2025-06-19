@@ -11,7 +11,7 @@ public class SportsEquipment
     public SportsEquipment(){}
     public SportsEquipment(SportType sport, float Weight, bool ProGrade)
     {
-        this.SportType = sport;
+        SportType = sport;
         this.Weight = Weight;
         this.ProGrade = ProGrade;
     }

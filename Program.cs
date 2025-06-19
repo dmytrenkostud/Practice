@@ -89,7 +89,7 @@ class Program
                     }
                     break;
                 case "5":
-                    if (bidirectionalList.count != 0)
+                    if (bidirectionalList.Length != 0)
                     {
                         string json = JsonSerializer.Serialize(bidirectionalList.ToList(), new JsonSerializerOptions
                         {
@@ -138,7 +138,7 @@ class Program
                    
                     break;
                 case "7":
-                    if (bidirectionalList.count != 0)
+                    if (bidirectionalList.Length != 0)
                     {
                         bidirectionalList.BubbleSortByWeight();
                         bidirectionalList.PrintList();

@@ -5,7 +5,8 @@ public class BidirectionalList
     private Node Head;
         private Node Tail;
         private int Count;
-        private Node iterationNode = null;
+        
+        private Node iterationNode;
 
         public BidirectionalList()
         {
@@ -14,14 +15,7 @@ public class BidirectionalList
             Count = 0;
         }
 
-        public int count
-        {
-            get
-            {
-                return Count;
-            }
-        }
-
+        
         //Insert Middle
         public void InsertMiddle(SportsEquipment data)
         {
